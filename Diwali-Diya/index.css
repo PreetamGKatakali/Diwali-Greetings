@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212121;
+    height:100vh;
+}
+.dia-container{
+    background-color: saddlebrown;
+    width: 300px;
+    height: 150px;
+    border-radius: 0 0 150px 150px;
+}
+.dia-plate{
+    position: relative;
+    top: -40px;
+    background-color:coral;
+    widows: 45px;
+    height: 80px;
+    border-radius: 50% 50% 50% 50%;
+}
+.light{
+    position: absolute;
+    top: 40px;
+    left:18.7%;
+    background-color:#fdf1c2;
+    width: 150px;
+    height: 150px;
+    border-radius: 100% 0 100% 0;
+    transform: rotate(-45deg);
+    animation: glow 2s infinite;
+}
+@keyframes glow{
+    50%{
+        transform: rotate(-45deg) scale(1.07);
+        top: 40px;
+        left: 18.7%;
+    }
+}
+.light::after{
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    content: "";
+    width: 110px;
+    height: 110px;
+    border-radius:  150px 0px;
+    background-color: #f2f53d;
+}
+.flame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(253, 241, 194, 0.2);
+    border-radius: 100%;
+}
+.lines{
+    position: absolute;
+    width: 260px;
+    height: 40px;
+    /* background-color: #f2f53d; */
+    border: none;
+    border-bottom: 5px dotted;
+    border-color: #f2f53d;
+    border-radius: 50%;
+}
